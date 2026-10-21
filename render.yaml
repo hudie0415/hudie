@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: h5-kefu
+    env: node
+    plan: free
+    buildCommand: "npm install"
+    startCommand: "node server.js"
+    envVars:
+      - key: ADMIN_PASSWORD
+        value: admin123
+      - key: PORT
+        value: "10000"
